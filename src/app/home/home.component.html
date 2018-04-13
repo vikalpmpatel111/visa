@@ -1,0 +1,15 @@
+<header>
+  <nav>
+      <img id="tri" class="tri" src="assets/tri.png">
+      <img class="logo" src="assets/logo.png">
+    <div class="link" *ngFor="let item of dataArr; let i=index">
+        <a href="#" (click)="clicked(i)">{{item}}</a>
+    </div> 
+      <img class="search" src="assets/search.png" (click)="clicked(100)">
+    <div class="yellowSlider">
+    </div>
+  </nav>
+  <div *ngIf="show">
+    <app-nav [row]="row" [search]="search"></app-nav>
+  </div>
+</header>

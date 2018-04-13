@@ -1,0 +1,17 @@
+<div class="nav">
+    <ng-container *ngIf="!show">
+  <div class="menu" *ngFor="let item of head;let i=index">
+    <a href="#">
+      <span><img [src]="imgData[i]"></span>
+      <span>{{item}}</span>
+    </a>
+  </div>
+  </ng-container>
+  <div *ngIf="show">
+    <div class="searchBar" >
+        <input class="txt" type="text">
+        <input class ="btn" type="button" value="GO">
+        <label>Common Searches</label>
+    </div>
+  </div>
+</div>
